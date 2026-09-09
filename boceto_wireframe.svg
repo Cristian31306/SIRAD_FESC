@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1150" width="100%" height="100%" style="background-color: #f8fafc; font-family: 'Segoe UI', Arial, sans-serif;">
+  <defs>
+    <style>
+      .wire-box { fill: #ffffff; stroke: #94a3b8; stroke-width: 2; rx: 6px; }
+      .wire-header { fill: #1e3a8a; }
+      .wire-sub { fill: #3b82f6; }
+      .wire-badge { fill: #e2e8f0; stroke: #64748b; stroke-width: 1; rx: 4px; }
+      .wire-title { font-weight: bold; fill: #0f172a; font-size: 14px; }
+      .wire-label { font-size: 12px; fill: #475569; }
+      .wire-annot { font-size: 12px; font-weight: bold; fill: #dc2626; }
+      .wire-grid { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4 4; }
+      .btn { fill: #2563eb; rx: 4px; }
+      .btn-text { fill: #ffffff; font-size: 12px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Marco Exterior de la Pantalla / Navegador -->
+  <rect x="20" y="20" width="860" height="1110" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Barra superior del Navegador simulada -->
+  <rect x="20" y="20" width="860" height="40" rx="10" fill="#f1f5f9"/>
+  <circle cx="45" cy="40" r="6" fill="#ef4444"/>
+  <circle cx="65" cy="40" r="6" fill="#eab308"/>
+  <circle cx="85" cy="40" r="6" fill="#22c55e"/>
+  <rect x="120" y="28" width="600" height="24" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="135" y="44" font-size="12" fill="#64748b">https://sirad.nortedesantander.local/desarrollo/index.php</text>
+
+  <!-- 1. ENCABEZADO O IDENTIFICACIÓN DEL PROYECTO -->
+  <rect x="40" y="75" width="820" height="85" class="wire-box" style="fill: #f8fafc; stroke: #2563eb;"/>
+  <rect x="55" y="90" width="55" height="55" rx="6" fill="#1e3a8a"/>
+  <text x="82" y="125" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">S</text>
+  <text x="125" y="112" font-size="18" font-weight="bold" fill="#1e3a8a">SIRAD · Sistema de Control y Trazabilidad de Radicados</text>
+  <text x="125" y="132" font-size="13" fill="#64748b">Secretaría de Programas y Proyectos Estratégicos · Gobernación de Norte de Santander</text>
+  <rect x="680" y="98" width="165" height="38" class="wire-badge"/>
+  <text x="690" y="121" font-size="11" fill="#334155">👤 Cristian Durán (Operador)</text>
+  <text x="45" y="70" class="wire-annot">[1] ENCABEZADO / IDENTIFICACIÓN INSTITUCIONAL</text>
+
+  <!-- 2. ELEMENTOS DE NAVEGACIÓN O ENLACES -->
+  <rect x="40" y="175" width="820" height="45" rx="5" fill="#1e293b"/>
+  <text x="65" y="203" font-size="13" font-weight="bold" fill="#ffffff">Inicio</text>
+  <text x="140" y="203" font-size="13" fill="#cbd5e1">Consultar Radicado</text>
+  <text x="290" y="203" font-size="13" fill="#cbd5e1">Nuevo Radicado</text>
+  <text x="420" y="203" font-size="13" fill="#cbd5e1">Semáforo de Plazos</text>
+  <text x="580" y="203" font-size="13" fill="#cbd5e1">Guía Multimedia</text>
+  <text x="730" y="203" font-size="13" fill="#cbd5e1">Ayuda / Normativa</text>
+  <text x="45" y="170" class="wire-annot">[2] ELEMENTOS DE NAVEGACIÓN PRINCIPAL (NAV)</text>
+
+  <!-- 3. ZONA PRINCIPAL DE CONTENIDO (BÚSQUEDA Y CONSULTA) -->
+  <rect x="40" y="245" width="820" height="235" class="wire-box" style="stroke: #0284c7;"/>
+  <text x="45" y="240" class="wire-annot">[3] ZONA PRINCIPAL DE CONTENIDO (CONSULTA Y ACCIÓN PRIMARIA)</text>
+  <text x="60" y="275" class="wire-title">Búsqueda y Consulta Rápida de Trámites</text>
+  <text x="60" y="295" class="wire-label">Localice inmediatamente el radicado para conocer el funcionario responsable y los días hábiles restantes.</text>
+  
+  <!-- Formulario de búsqueda -->
+  <rect x="60" y="315" width="480" height="42" rx="4" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="75" y="341" font-size="13" fill="#94a3b8">Ej: RAD-2026-0042 o nombre del remitente...</text>
+  <rect x="555" y="315" width="130" height="42" class="btn"/>
+  <text x="620" y="341" text-anchor="middle" class="btn-text">🔍 Consultar</text>
+  <rect x="695" y="315" width="145" height="42" rx="4" fill="#e2e8f0" stroke="#cbd5e1"/>
+  <text x="767" y="341" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155">+ Radicar Nuevo</text>
+
+  <!-- Ficha de resultado de radicado -->
+  <rect x="60" y="375" width="780" height="90" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="75" y="400" font-size="13" font-weight="bold" fill="#1e3a8a">RAD-2026-0089 · Solicitud Viabilidad Proyecto Vía Chinácota</text>
+  <text x="75" y="420" font-size="12" fill="#475569">Remitente: Alcaldía Municipal de Chinácota | Asignado a: Ing. Claudia Pérez (Especialista Vías)</text>
+  <text x="75" y="445" font-size="12" fill="#475569">Fecha Radicado: 28/08/2026 | Término Legal: 15 días hábiles</text>
+  <rect x="670" y="390" width="150" height="30" rx="15" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="745" y="410" text-anchor="middle" font-size="11" font-weight="bold" fill="#b45309">🟡 En Alerta (4 días)</text>
+
+  <!-- 4. ESPACIO PARA INFORMACIÓN RELEVANTE (MÉTRICAS Y SEMÁFORO) -->
+  <rect x="40" y="505" width="820" height="175" class="wire-box" style="stroke: #10b981;"/>
+  <text x="45" y="500" class="wire-annot">[4] ESPACIO PARA INFORMACIÓN RELEVANTE (SEMÁFORO DE PLAZOS Y ESTADO)</text>
+  <text x="60" y="535" class="wire-title">Tablero Operativo de Términos (Semáforo Institucional)</text>
+
+  <!-- 4 Tarjetas de métricas -->
+  <!-- Tarjeta 1: Total -->
+  <rect x="60" y="555" width="180" height="105" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="75" y="580" font-size="12" font-weight="bold" fill="#1e40af">TOTAL RADICADOS</text>
+  <text x="75" y="625" font-size="32" font-weight="bold" fill="#1e3a8a">28</text>
+  <text x="75" y="645" font-size="11" fill="#64748b">Mes en curso (Septiembre)</text>
+
+  <!-- Tarjeta 2: En Término -->
+  <rect x="260" y="555" width="180" height="105" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="275" y="580" font-size="12" font-weight="bold" fill="#166534">🟢 AL DÍA / A TIEMPO</text>
+  <text x="275" y="625" font-size="32" font-weight="bold" fill="#15803d">19</text>
+  <text x="275" y="645" font-size="11" fill="#64748b">> 5 días hábiles</text>
+
+  <!-- Tarjeta 3: Alerta -->
+  <rect x="460" y="555" width="180" height="105" rx="6" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="475" y="580" font-size="12" font-weight="bold" fill="#92400e">🟡 EN ALERTA</text>
+  <text x="475" y="625" font-size="32" font-weight="bold" fill="#b45309">06</text>
+  <text x="475" y="645" font-size="11" fill="#64748b">1 a 4 días restantes</text>
+
+  <!-- Tarjeta 4: Vencidos -->
+  <rect x="660" y="555" width="180" height="105" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="675" y="580" font-size="12" font-weight="bold" fill="#991b1b">🔴 TÉRMINO VENCIDO</text>
+  <text x="675" y="625" font-size="32" font-weight="bold" fill="#b91c1c">03</text>
+  <text x="675" y="645" font-size="11" fill="#64748b">Prioridad inmediata de despacho</text>
+
+  <!-- 5. LUGAR PREVISTO PARA RECURSO MULTIMEDIA -->
+  <rect x="40" y="705" width="820" height="265" class="wire-box" style="stroke: #8b5cf6;"/>
+  <text x="45" y="700" class="wire-annot">[5] LUGAR PREVISTO PARA UN RECURSO MULTIMEDIA (CAPACITACIÓN / GUÍA)</text>
+  <text x="60" y="735" class="wire-title">Módulo de Capacitación e Inducción Interactiva</text>
+  <text x="60" y="755" class="wire-label">Video explicativo del procedimiento paso a paso para la recepción, radicación digital y asignación sin duplicidad.</text>
+
+  <!-- Cuadro del reproductor multimedia -->
+  <rect x="60" y="775" width="480" height="175" rx="6" fill="#0f172a"/>
+  <!-- Botón Play central -->
+  <circle cx="300" cy="860" r="28" fill="#3b82f6" opacity="0.9"/>
+  <polygon points="292,846 315,860 292,874" fill="#ffffff"/>
+  <text x="300" y="915" text-anchor="middle" font-size="12" fill="#94a3b8">Video: Guía Paso a Paso - Flujo de Radicación SIRAD (HTML5 &lt;video&gt;)</text>
+
+  <!-- Panel lateral explicativo del recurso multimedia -->
+  <rect x="560" y="775" width="280" height="175" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="575" y="805" font-size="13" font-weight="bold" fill="#1e293b">Puntos Clave del Video:</text>
+  <text x="575" y="830" font-size="12" fill="#475569">1. Ingreso de datos del remitente.</text>
+  <text x="575" y="855" font-size="12" fill="#475569">2. Tipología y cálculo automático de días.</text>
+  <text x="575" y="880" font-size="12" fill="#475569">3. Asignación directa al especialista.</text>
+  <text x="575" y="905" font-size="12" fill="#475569">4. Notificación y seguimiento del semáforo.</text>
+  <text x="575" y="932" font-size="11" font-style="italic" fill="#64748b">Accesible con subtítulos y controles nativos.</text>
+
+  <!-- 6. PIE DE PÁGINA O INFORMACIÓN COMPLEMENTARIA -->
+  <rect x="40" y="990" width="820" height="120" rx="6" fill="#0f172a"/>
+  <text x="45" y="985" class="wire-annot">[6] PIE DE PÁGINA (FOOTER) / INFORMACIÓN COMPLEMENTARIA</text>
+  <text x="60" y="1025" font-size="13" font-weight="bold" fill="#ffffff">Secretaría de Programas y Proyectos Estratégicos y Especiales</text>
+  <text x="60" y="1045" font-size="12" fill="#94a3b8">Gobernación de Norte de Santander · Edificio Cúpula Chata, San José de Cúcuta, Colombia</text>
+  <text x="60" y="1065" font-size="12" fill="#94a3b8">Horario de Radicación: Lunes a Viernes 7:30 a.m. - 12:00 m. / 2:00 p.m. - 6:00 p.m.</text>
+  <text x="60" y="1085" font-size="11" fill="#64748b">SIRAD v1.0 (Construcción inicial web en PHP / HTML5) · Autor: Cristian Alexander Durán Medina</text>
+  <text x="730" y="1085" font-size="11" fill="#38bdf8">Normativa Ley 1755</text>
+</svg>

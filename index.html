@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <!-- config basica html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- datos de la pajina y seo -->
+    <title>SIRAD · Sistema de Control y Trazabilidad de Radicados</title>
+    <meta name="description"
+        content="SIRAD: Sistema web para el control de flujo interno, seguimiento de términos legales y semáforo de plazos de correspondencia oficial de la Gobernación de Norte de Santander.">
+    <meta name="keywords"
+        content="SIRAD, radicados, gestión documental, correspondencia, términos legales, Gobernación Norte de Santander, Cúcuta">
+    <meta name="author" content="Cristian Alexander Durán Medina">
+    <meta name="DC.Title" content="SIRAD - Sistema de Control y Trazabilidad de Radicados">
+    <meta name="DC.Creator" content="Gobernación de Norte de Santander">
+    <meta name="robots" content="index, follow">
+
+    <!-- colorcito para el celular -->
+    <meta name="theme-color" content="#1e3a8a">
+
+    <!-- para compartir en redes -->
+    <meta property="og:title" content="SIRAD · Control y Trazabilidad de Radicados">
+    <meta property="og:description"
+        content="Plataforma de seguimiento y control de plazos legales para la Secretaría de Programas y Proyectos Estratégicos.">
+    <meta property="og:type" content="website">
+
+    <!-- archivo de estilos css -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- cabezera principal del sistema -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-box">
+                <div class="brand-texts">
+                    <h1>SIRAD · Sistema de Radicados</h1>
+                    <p>Secretaría de Programas y Proyectos Estratégicos · Gobernación de Norte de Santander</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- menu de nabegacion -->
+    <nav class="site-nav" aria-label="Navegación principal del sistema">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                        class="nav-link active">Inicio</a></li>
+                <li><a href="javascript:void(0)"
+                        onclick="document.getElementById('consulta').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Consultar Radicado</a></li>
+                <li><a href="javascript:void(0)"
+                        onclick="document.getElementById('semaforo').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Semáforo de Términos</a></li>
+                <li><a href="javascript:void(0)"
+                        onclick="document.getElementById('capacitacion').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Guía Multimedia</a></li>
+                <li><a href="javascript:void(0)"
+                        onclick="document.getElementById('institucional').scrollIntoView({behavior: 'smooth'})"
+                        class="nav-link">Información Entidad</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+
+        <!-- seccion del tablero o kpis -->
+        <section id="semaforo" class="kpi-section" aria-labelledby="kpi-heading">
+            <h2 id="kpi-heading" class="section-heading">
+                Tablero de Control de Términos Legales
+            </h2>
+            <div class="kpi-grid">
+                <article class="kpi-card total">
+                    <div class="kpi-title">Radicados en Gestión</div>
+                    <div class="kpi-number">4</div>
+                    <div class="kpi-desc">Total acumulado del mes</div>
+                </article>
+
+                <article class="kpi-card a-tiempo">
+                    <div class="kpi-title">Al Día / A Tiempo</div>
+                    <div class="kpi-number" style="color: var(--color-status-green);" aria-label="1 radicado al día">🟢 1</div>
+                    <meter value="8" min="0" max="10" low="3" high="5" optimum="10" style="width: 100%; margin: 5px 0;"></meter>
+                    <div class="kpi-desc">Mayor a 5 días hábiles de plazo</div>
+                </article>
+
+                <article class="kpi-card alerta">
+                    <div class="kpi-title">En Alerta</div>
+                    <div class="kpi-number" style="color: var(--color-status-yellow);" aria-label="1 radicado en alerta">🟡 1</div>
+                    <meter value="3" min="0" max="10" low="3" high="5" optimum="10" style="width: 100%; margin: 5px 0;"></meter>
+                    <div class="kpi-desc">Entre 1 y 4 días hábiles restantes</div>
+                </article>
+
+                <article class="kpi-card vencido">
+                    <div class="kpi-title">Término Vencido</div>
+                    <div class="kpi-number" style="color: var(--color-status-red);" aria-label="1 radicado vencido">🔴 1</div>
+                    <meter value="0" min="0" max="10" low="3" high="5" optimum="10" style="width: 100%; margin: 5px 0;"></meter>
+                    <div class="kpi-desc">Requiere respuesta o despacho urgente</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- zona de consulta y tabla -->
+        <section id="consulta" class="content-section" aria-labelledby="consulta-heading">
+            <h2 id="consulta-heading" class="section-heading">
+                Consulta y Trazabilidad de Radicados Internos
+            </h2>
+
+            <!-- formulario de busqueda -->
+            <form action="#" method="GET" class="search-form" role="search">
+                <input type="text" name="q" class="search-input"
+                    placeholder="Buscar por código (ej: RAD-2026-0089), remitente o asunto..." value=""
+                    aria-label="Término de búsqueda de radicado">
+                <select name="estado" class="filter-select" aria-label="Filtrar por estado">
+                    <option value="todos" selected>Todos los estados</option>
+                    <option value="a_tiempo">🟢 Al Día</option>
+                    <option value="alerta">🟡 En Alerta</option>
+                    <option value="vencido">🔴 Vencido</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Buscar Radicado</button>
+            </form>
+
+            <!-- tabla con los resultados -->
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Radicado</th>
+                            <th scope="col">Remitente</th>
+                            <th scope="col">Asunto</th>
+                            <th scope="col">Funcionario Asignado</th>
+                            <th scope="col">Plazo Restante</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>RAD-2026-0089</strong></td>
+                            <td>Alcaldía Municipal de Chinácota</td>
+                            <td>Solicitud de concepto técnico y viabilidad para pavimentación vía veredal</td>
+                            <td>Ing. Claudia Pérez (Especialista en Vías)</td>
+                            <td>
+                                4 días hábiles
+                            </td>
+                            <td>
+                                <span class="badge-status badge-alerta">
+                                    En Alerta </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>RAD-2026-0090</strong></td>
+                            <td>Comunidad Vereda El Salado</td>
+                            <td>Petición sobre estado del proyecto de acueducto rural y saneamiento básico</td>
+                            <td>Arq. Mauricio Jaimes (Proyectos Especiales)</td>
+                            <td>
+                                8 días hábiles
+                            </td>
+                            <td>
+                                <span class="badge-status badge-a_tiempo">
+                                    Al Día </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>RAD-2026-0078</strong></td>
+                            <td>Veeduría Ciudadana Cúcuta</td>
+                            <td>Solicitud de informe de avance financiero - Convenio Interadministrativo 014</td>
+                            <td>Dr. Carlos Mendoza (Área Jurídica)</td>
+                            <td>
+                                <span style="color: var(--color-status-red); font-weight: bold;">
+                                    <time datetime="2026-09-06">Vencido hace 2 días</time>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="badge-status badge-vencido">
+                                    Vencido </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>RAD-2026-0085</strong></td>
+                            <td>Secretaría de Hacienda Departamental</td>
+                            <td>Traslado presupuestal para estudios de prefactibilidad de complejo deportivo</td>
+                            <td>Econ. Laura Ortiz (Planificación)</td>
+                            <td>
+                                Vence hoy
+                            </td>
+                            <td>
+                                <span class="badge-status badge-completado">
+                                    Completado </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- seccion para el video -->
+        <section id="capacitacion" class="multimedia-section" aria-labelledby="multimedia-heading">
+            <h2 id="multimedia-heading" class="section-heading">
+                Guía Multimedia de Inducción al Usuario
+            </h2>
+            <div class="multimedia-container">
+                <figure class="video-box">
+                    <!-- elemento de video nativo html5 -->
+                    <video class="video-player" controls preload="metadata"
+                        poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'><rect width='600' height='300' fill='%230f172a'/><circle cx='300' cy='150' r='36' fill='%232563eb'/><polygon points='290,135 320,150 290,165' fill='%23ffffff'/><text x='300' y='220' fill='%2394a3b8' font-size='14' text-anchor='middle' font-family='sans-serif'>Tutorial SIRAD: Flujo y Trazabilidad de Radicados</text></svg>">
+                        <source src="recursos/PresentacionProyectoSIRAD.mp4" type="video/mp4">
+                        <p>Tu navegador no soporta el elemento de video HTML5. Puede consultar la guía en formato texto.
+                        </p>
+                    </video>
+                    <figcaption
+                        style="padding: 0.5rem 1rem; font-size: 0.75rem; color: #94a3b8; background-color: #020617;">
+                        Video institucional: Tutorial básico para la radicación y seguimiento en SIRAD.
+                    </figcaption>
+                </figure>
+
+                <div class="video-info">
+                    <h3>¿Cómo opera el flujo en SIRAD?</h3>
+                    <p>
+                        Este recurso multimedia capacita a los funcionarios de la Secretaría en el manejo responsable de
+                        los términos de ley y la asignación digital de documentos.
+                    </p>
+                    <ul class="step-list">
+                        <li><span class="step-num">1</span> Recepción y radicación en ventanilla única.</li>
+                        <li><span class="step-num">2</span> Tipificación automática según días hábiles.</li>
+                        <li><span class="step-num">3</span> Derivación al funcionario especialista.</li>
+                        <li><span class="step-num">4</span> Control de alertas visuales en el semáforo.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- pie de pagina con los datos -->
+    <footer id="institucional" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Secretaría de Programas y Proyectos</h4>
+                <p>Gobernación de Norte de Santander</p>
+                <address>
+                    Cúpula Chata - Calle 14 con Avenida 5<br>
+                    San José de Cúcuta, Norte de Santander<br>
+                    Colombia
+                </address>
+            </div>
+
+            <div class="footer-col">
+                <h4>Horario y Canales Oficiales</h4>
+                <p>Lunes a Viernes: 7:30 a.m. a 12:00 m. y 2:00 p.m. a 6:00 p.m.</p>
+                <p>Ventanilla de Radicación Interna Presencial y Digital.</p>
+                <p>Atención amparada bajo Ley 1755 de 2015.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Detalles de la Construcción Web</h4>
+                <p><strong>Proyecto:</strong> SIRAD v1.0</p>
+                <p><strong>Desarrollador:</strong> Cristian Alexander Durán Medina</p>
+                <p><strong>Tecnologías:</strong> HTML5 + PHP</p>
+                <p><strong>Asignatura:</strong> Desarrollo Básico de Aplicaciones en Red</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy;ALGORAH. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

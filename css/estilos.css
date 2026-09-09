@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    /* fondo de la pajina */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* cabezera principal */
+.site-header {
+    background-color: #5c9ead;
+    /* color asul principal */
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 3px solid #3d7a88;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 28px;
+    /* letra grande titulo */
+    font-weight: bold;
+    /* negrilla */
+}
+
+.site-header p {
+    font-size: 16px;
+    font-style: italic;
+    /* letra cursiba */
+    color: #e0f2f1;
+}
+
+.user-badge {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* menu de nabegacion */
+.site-nav {
+    background-color: #3d7a88;
+    padding: 12px;
+    text-align: center;
+}
+
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.site-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+    /* cuando se pasa el mause */
+}
+
+/* cuerpo principal de la pag */
+.main-wrapper {
+    width: 85%;
+    max-width: 900px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    /* bordes redonditos */
+}
+
+/* titulos h2 h3 */
+h2 {
+    color: #5c9ead;
+    /* color del texto */
+    font-size: 22px;
+    /* tamano de letra */
+    border-bottom: 2px dashed #5c9ead;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #444444;
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* tarjetas del semaforo */
+.kpi-grid {
+    display: flex;
+    gap: 15px; /* espacio entre las tarjetas */
+    flex-wrap: wrap;
+}
+
+.kpi-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 6px solid #5c9ead;
+    flex: 1; /* Esto hace que se distribuyan horizontalmente */
+    min-width: 150px;
+}
+
+.kpi-card.a-tiempo {
+    border-left-color: #66bb6a;
+}
+
+/* color berde */
+.kpi-card.alerta {
+    border-left-color: #ffa726;
+}
+
+/* color naranga */
+.kpi-card.vencido {
+    border-left-color: #ef5350;
+}
+
+/* color rogo */
+
+.kpi-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.kpi-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* form de buscar */
+.search-form {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f4f7f6;
+    border: 1px solid #ccc;
+}
+
+.search-input,
+.filter-select {
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: #5c9ead;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* tabla normal */
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+table.data-table th,
+table.data-table td {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    text-align: left;
+}
+
+table.data-table th {
+    background-color: #5c9ead;
+    color: white;
+}
+
+/* viñetas de estado en la tabla */
+.badge-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-a_tiempo {
+    background-color: #66bb6a;
+}
+
+.badge-alerta {
+    background-color: #ffa726;
+}
+
+.badge-vencido {
+    background-color: #ef5350;
+}
+
+.badge-completado {
+    background-color: #42a5f5;
+}
+
+/* pie de pajina o footer */
+.site-footer {
+    background-color: #2c3e50; /* color obsuro del footer */
+    color: #ecf0f1;
+    padding: 30px 20px 10px 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+    margin: 0 15px 15px 15px;
+}
+
+.footer-col h4 {
+    color: #5c9ead;
+    border-bottom: 1px dashed #5c9ead;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-col p, .footer-col address {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #455a64;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #95a5a6;
+}
