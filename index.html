@@ -49,20 +49,10 @@
     <nav class="site-nav" aria-label="Navegación principal del sistema">
         <div class="nav-container">
             <ul class="nav-list">
-                <li><a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-                        class="nav-link active">Inicio</a></li>
-                <li><a href="javascript:void(0)"
-                        onclick="document.getElementById('consulta').scrollIntoView({behavior: 'smooth'})"
-                        class="nav-link">Consultar Radicado</a></li>
-                <li><a href="javascript:void(0)"
-                        onclick="document.getElementById('semaforo').scrollIntoView({behavior: 'smooth'})"
-                        class="nav-link">Semáforo de Términos</a></li>
-                <li><a href="javascript:void(0)"
-                        onclick="document.getElementById('capacitacion').scrollIntoView({behavior: 'smooth'})"
-                        class="nav-link">Guía Multimedia</a></li>
-                <li><a href="javascript:void(0)"
-                        onclick="document.getElementById('institucional').scrollIntoView({behavior: 'smooth'})"
-                        class="nav-link">Información Entidad</a></li>
+                <li><a href="index.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="radicar.html" class="nav-link">Nuevo Radicado</a></li>
+                <li><a href="consultar.html" class="nav-link">Consultar</a></li>
+                <li><a href="index.html#capacitacion" class="nav-link">Ayuda</a></li>
             </ul>
         </div>
     </nav>
@@ -104,98 +94,7 @@
             </div>
         </section>
 
-        <!-- zona de consulta y tabla -->
-        <section id="consulta" class="content-section" aria-labelledby="consulta-heading">
-            <h2 id="consulta-heading" class="section-heading">
-                Consulta y Trazabilidad de Radicados Internos
-            </h2>
 
-            <!-- formulario de busqueda -->
-            <form action="#" method="GET" class="search-form" role="search">
-                <input type="text" name="q" class="search-input"
-                    placeholder="Buscar por código (ej: RAD-2026-0089), remitente o asunto..." value=""
-                    aria-label="Término de búsqueda de radicado">
-                <select name="estado" class="filter-select" aria-label="Filtrar por estado">
-                    <option value="todos" selected>Todos los estados</option>
-                    <option value="a_tiempo">🟢 Al Día</option>
-                    <option value="alerta">🟡 En Alerta</option>
-                    <option value="vencido">🔴 Vencido</option>
-                </select>
-                <button type="submit" class="btn btn-primary">Buscar Radicado</button>
-            </form>
-
-            <!-- tabla con los resultados -->
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Radicado</th>
-                            <th scope="col">Remitente</th>
-                            <th scope="col">Asunto</th>
-                            <th scope="col">Funcionario Asignado</th>
-                            <th scope="col">Plazo Restante</th>
-                            <th scope="col">Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>RAD-2026-0089</strong></td>
-                            <td>Alcaldía Municipal de Chinácota</td>
-                            <td>Solicitud de concepto técnico y viabilidad para pavimentación vía veredal</td>
-                            <td>Ing. Claudia Pérez (Especialista en Vías)</td>
-                            <td>
-                                4 días hábiles
-                            </td>
-                            <td>
-                                <span class="badge-status badge-alerta">
-                                    En Alerta </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>RAD-2026-0090</strong></td>
-                            <td>Comunidad Vereda El Salado</td>
-                            <td>Petición sobre estado del proyecto de acueducto rural y saneamiento básico</td>
-                            <td>Arq. Mauricio Jaimes (Proyectos Especiales)</td>
-                            <td>
-                                8 días hábiles
-                            </td>
-                            <td>
-                                <span class="badge-status badge-a_tiempo">
-                                    Al Día </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>RAD-2026-0078</strong></td>
-                            <td>Veeduría Ciudadana Cúcuta</td>
-                            <td>Solicitud de informe de avance financiero - Convenio Interadministrativo 014</td>
-                            <td>Dr. Carlos Mendoza (Área Jurídica)</td>
-                            <td>
-                                <span style="color: var(--color-status-red); font-weight: bold;">
-                                    <time datetime="2026-09-06">Vencido hace 2 días</time>
-                                </span>
-                            </td>
-                            <td>
-                                <span class="badge-status badge-vencido">
-                                    Vencido </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>RAD-2026-0085</strong></td>
-                            <td>Secretaría de Hacienda Departamental</td>
-                            <td>Traslado presupuestal para estudios de prefactibilidad de complejo deportivo</td>
-                            <td>Econ. Laura Ortiz (Planificación)</td>
-                            <td>
-                                Vence hoy
-                            </td>
-                            <td>
-                                <span class="badge-status badge-completado">
-                                    Completado </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
 
         <!-- seccion para el video -->
         <section id="capacitacion" class="multimedia-section" aria-labelledby="multimedia-heading">

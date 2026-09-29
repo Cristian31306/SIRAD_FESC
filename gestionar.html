@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Radicado · SIRAD</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-box">
+                <div class="brand-texts">
+                    <h1>SIRAD · Sistema de Radicados</h1>
+                    <p>Secretaría de Programas y Proyectos Estratégicos</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="radicar.html" class="nav-link">Nuevo Radicado</a></li>
+                <li><a href="consultar.html" class="nav-link">Consultar</a></li>
+                <li><a href="index.html#capacitacion" class="nav-link">Ayuda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <section class="content-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 class="section-heading" style="margin: 0; border: none;">Gestionar Radicado: RAD-2026-0089</h2>
+                <a href="detalle.html" class="btn" style="background-color: var(--text-muted); text-decoration: none; font-size: 0.85rem;">← Volver al Detalle</a>
+            </div>
+            
+            <div style="background-color: #f1f5f9; padding: 1rem; border-radius: var(--radius); margin-bottom: 2rem; border-left: 4px solid var(--info);">
+                <strong>Asunto original:</strong> Solicitud de concepto técnico y viabilidad para pavimentación vía veredal.
+                <br>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Asignado a: Ing. Claudia Pérez (Usted)</span>
+            </div>
+            
+            <form action="detalle.html" method="POST" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label for="estado_tramite">Actualizar Estado del Trámite</label>
+                    <select id="estado_tramite" name="estado_tramite" class="form-control" required>
+                        <option value="en_revision">En Revisión (Continuar trámite)</option>
+                        <option value="requiere_ajustes">Requiere Información Adicional</option>
+                        <option value="completado">Resuelto / Completado (Cerrar caso)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="observaciones">Observaciones o Concepto Técnico emitido</label>
+                    <textarea id="observaciones" name="observaciones" class="form-control" placeholder="Escriba aquí los detalles de la gestión, respuesta o razones de la actualización del estado..." required style="min-height: 150px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="archivo_respuesta">Adjuntar Documento de Respuesta (Opcional si solo es actualización)</label>
+                    <input type="file" id="archivo_respuesta" name="archivo_respuesta" class="form-control" accept=".pdf,.docx">
+                    <small style="color: var(--text-muted); display: block; margin-top: 0.5rem;">Debe estar firmado digitalmente si el estado pasa a "Completado".</small>
+                </div>
+
+                <div class="form-group" style="margin-top: 2rem;">
+                    <button type="submit" class="btn" style="background-color: var(--success);">Guardar Gestión y Notificar</button>
+                    <a href="detalle.html" class="btn" style="background-color: var(--text-muted); text-decoration: none; margin-left: 10px;">Cancelar</a>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy;ALGORAH. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

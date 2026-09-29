@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalle Radicado · SIRAD</title>
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-box">
+                <div class="brand-texts">
+                    <h1>SIRAD · Sistema de Radicados</h1>
+                    <p>Secretaría de Programas y Proyectos Estratégicos · Gobernación de Norte de Santander</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegación principal del sistema">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="radicar.html" class="nav-link">Nuevo Radicado</a></li>
+                <li><a href="consultar.html" class="nav-link">Consultar</a></li>
+                <li><a href="index.html#capacitacion" class="nav-link">Ayuda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <section class="content-section">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 class="section-heading" style="margin-bottom: 0; border: none;">Radicado: RAD-2026-0089</h2>
+                <span class="badge-status badge-alerta" style="font-size: 1rem; padding: 0.5rem 1rem;">🟡 En Alerta (4 días)</span>
+            </div>
+            
+            <hr style="border: 0; height: 1px; background: var(--border-color); margin: 1.5rem 0;">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <h3>Información General</h3>
+                    <p><strong>Remitente:</strong> Alcaldía Municipal de Chinácota</p>
+                    <p><strong>Asunto:</strong> Solicitud de concepto técnico y viabilidad para pavimentación vía veredal</p>
+                    <p><strong>Tipo de Documento:</strong> Derecho de Petición</p>
+                    <p><strong>Fecha de Radicación:</strong> 15 de Septiembre de 2026</p>
+                    <p><strong>Fecha Límite:</strong> 05 de Octubre de 2026</p>
+                    
+                    <h3 style="margin-top: 2rem;">Funcionario Asignado</h3>
+                    <p><strong>Nombre:</strong> Ing. Claudia Pérez</p>
+                    <p><strong>Área:</strong> Especialista en Vías</p>
+                </div>
+                
+                <div>
+                    <h3>Trazabilidad del Documento</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">20 Septiembre 2026 - 08:30 AM</div>
+                            <div class="timeline-content">
+                                <h4>En Revisión Técnica</h4>
+                                <p>El funcionario asignado comenzó la revisión de los planos anexos.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">16 Septiembre 2026 - 10:15 AM</div>
+                            <div class="timeline-content">
+                                <h4>Asignación de Funcionario</h4>
+                                <p>Radicado asignado a Ing. Claudia Pérez por el administrador.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">15 Septiembre 2026 - 04:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>Radicación Inicial</h4>
+                                <p>Documento recibido en ventanilla única y digitalizado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                <a href="gestionar.html" class="btn" style="background-color: var(--success); text-decoration: none;">Responder / Gestionar Radicado</a>
+                <a href="consultar.html" class="btn" style="background-color: var(--text-muted); text-decoration: none;">Volver a Consultas</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy;ALGORAH. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

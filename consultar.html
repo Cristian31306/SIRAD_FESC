@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consultar Radicados · SIRAD</title>
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-box">
+                <div class="brand-texts">
+                    <h1>SIRAD · Sistema de Radicados</h1>
+                    <p>Secretaría de Programas y Proyectos Estratégicos · Gobernación de Norte de Santander</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegación principal del sistema">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="radicar.html" class="nav-link">Nuevo Radicado</a></li>
+                <li><a href="consultar.html" class="nav-link active">Consultar</a></li>
+                <li><a href="index.html#capacitacion" class="nav-link">Ayuda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <section class="content-section">
+            <h2 class="section-heading">Consulta y Trazabilidad de Radicados</h2>
+            
+            <form action="#" method="GET" class="search-form" role="search">
+                <input type="text" name="q" class="search-input"
+                    placeholder="Buscar por código (ej: RAD-2026-0089), remitente o asunto..." value=""
+                    aria-label="Término de búsqueda de radicado">
+                <select name="estado" class="filter-select" aria-label="Filtrar por estado">
+                    <option value="todos" selected>Todos los estados</option>
+                    <option value="a_tiempo">🟢 Al Día</option>
+                    <option value="alerta">🟡 En Alerta</option>
+                    <option value="vencido">🔴 Vencido</option>
+                </select>
+                <button type="submit" class="btn">Buscar</button>
+            </form>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Radicado</th>
+                            <th scope="col">Remitente</th>
+                            <th scope="col">Asunto</th>
+                            <th scope="col">Asignado</th>
+                            <th scope="col">Plazo</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>RAD-2026-0089</strong></td>
+                            <td>Alcaldía de Chinácota</td>
+                            <td>Solicitud de concepto técnico vía veredal</td>
+                            <td>Ing. Claudia Pérez</td>
+                            <td>4 días</td>
+                            <td><span class="badge-status badge-alerta">En Alerta</span></td>
+                            <td><a href="detalle.html" class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Ver</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>RAD-2026-0090</strong></td>
+                            <td>Comunidad Vereda El Salado</td>
+                            <td>Petición acueducto rural</td>
+                            <td>Arq. Mauricio Jaimes</td>
+                            <td>8 días</td>
+                            <td><span class="badge-status badge-a_tiempo">Al Día</span></td>
+                            <td><a href="detalle.html" class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Ver</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>RAD-2026-0078</strong></td>
+                            <td>Veeduría Cúcuta</td>
+                            <td>Avance Convenio 014</td>
+                            <td>Dr. Carlos Mendoza</td>
+                            <td><span style="color: var(--danger);">Vencido</span></td>
+                            <td><span class="badge-status badge-vencido">Vencido</span></td>
+                            <td><a href="detalle.html" class="btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Ver</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy;ALGORAH. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
